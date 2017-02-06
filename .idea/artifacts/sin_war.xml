@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sin:war">
+    <output-path>/Volumes/무제/Project/zzzprac/target</output-path>
+    <root id="archive" name="sin-1.0.0-BUILD-SNAPSHOT.war">
+      <element id="artifact" artifact-name="sin:war exploded" />
+    </root>
+  </artifact>
+</component>
