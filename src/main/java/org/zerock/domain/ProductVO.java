@@ -16,6 +16,7 @@ public class ProductVO {
 	public double getPrice() {
 		return price;
 	}
+
 	@Override
 	public String toString() {
 		return "ProductVO [name=" + name +
