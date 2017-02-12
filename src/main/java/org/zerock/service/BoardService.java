@@ -30,4 +30,6 @@ public interface BoardService {
     public int listSearchCount(SearchCriteria cri) throws Exception;
 
 
+
+
 }

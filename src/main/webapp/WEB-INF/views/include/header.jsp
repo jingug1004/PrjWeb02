@@ -409,7 +409,7 @@
           <!-- End Clothes -->
 
           <!-- Main Demo -->
-          <li><a href="<c:url value="/board/listPage"/>">Free Board</a></li>
+          <li><a href="<c:url value="/sboard/list"/>">Free Board</a></li>
           <!-- Main Demo -->
         </ul>
         <!-- End Nav Menu -->

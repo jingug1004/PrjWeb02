@@ -30,13 +30,11 @@ public class PageMaker {
 
     private void calcData() {
 
-        endPage = (int) (Math.ceil(cri.getPage() /
-                (double) displayPageNum) * displayPageNum);
+        endPage = (int) (Math.ceil(cri.getPage() / (double) displayPageNum) * displayPageNum);
 
         startPage = (endPage - displayPageNum) + 1;
 
-        int tempEndPage = (int) (Math.ceil(totalCount /
-                (double) cri.getPerPageNum()));
+        int tempEndPage = (int) (Math.ceil(totalCount / (double) cri.getPerPageNum()));
 
         if (endPage > tempEndPage) {
             endPage = tempEndPage;
@@ -45,22 +43,7 @@ public class PageMaker {
         prev = startPage == 1 ? false : true;
 
         next = endPage * cri.getPerPageNum() >= totalCount ? false : true;
-    }
 
-    public void setStartPage(int startPage) {
-        this.startPage = startPage;
-    }
-
-    public void setEndPage(int endPage) {
-        this.endPage = endPage;
-    }
-
-    public void setPrev(boolean prev) {
-        this.prev = prev;
-    }
-
-    public void setNext(boolean next) {
-        this.next = next;
     }
 
     public int getTotalCount() {
@@ -91,26 +74,24 @@ public class PageMaker {
         return cri;
     }
 
-    @Override
-    public String toString() {
-        return "PageMaker{" +
-                "totalCount=" + totalCount +
-                ", startPage=" + startPage +
-                ", endPage=" + endPage +
-                ", prev=" + prev +
-                ", next=" + next +
-                ", displayPageNum=" + displayPageNum +
-                ", cri=" + cri +
-                '}';
+    public String makeQuery(int page) {
+
+        UriComponents uriComponents = UriComponentsBuilder.newInstance().queryParam("page", page)
+                .queryParam("perPageNum", cri.getPerPageNum()).build();
+
+        return uriComponents.toUriString();
     }
 
-    public String makeQuery(int page) {
+
+    public String makeSearch(int page){
 
         UriComponents uriComponents =
                 UriComponentsBuilder.newInstance()
-                .queryParam("page", page)
-                .queryParam("perPageNum", cri.getPerPageNum())
-                .build();
+                        .queryParam("page", page)
+                        .queryParam("perPageNum", cri.getPerPageNum())
+                        .queryParam("searchType", ((SearchCriteria)cri).getSearchType())
+                        .queryParam("keyword", ((SearchCriteria)cri).getKeyword())
+                        .build();
 
         return uriComponents.toUriString();
     }

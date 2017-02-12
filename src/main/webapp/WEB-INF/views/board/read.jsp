@@ -82,6 +82,7 @@
                         });
 
                         $(".btn-danger").on("click", function(){
+                            formObj.attr("method", "get");
                             formObj.attr("action", "/board/remove");
                             formObj.submit();
                         });
