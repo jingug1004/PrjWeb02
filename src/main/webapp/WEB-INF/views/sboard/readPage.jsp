@@ -15,27 +15,26 @@
 				</div>
 				<!-- /.box-header -->
 
-				<form role="form" action="modifyPage" method="post">
+<form role="form" action="modifyPage" method="post">
 
-					<input type='hidden' name='bno' value="${boardVO.bno}">
-					<input type='hidden' name='page' value="${cri.page}">
-					<input type='hidden' name='perPageNum' value="${cri.perPageNum}">
-					<input type='hidden' name='searchType' value="${cri.searchType}">
-					<input type='hidden' name='keyword' value="${cri.keyword}">
+	<input type='hidden' name='bno' value="${boardVO.bno}"> <input
+		type='hidden' name='page' value="${cri.page}"> <input
+		type='hidden' name='perPageNum' value="${cri.perPageNum}">
+	<input type='hidden' name='searchType' value="${cri.searchType}">
+	<input type='hidden' name='keyword' value="${cri.keyword}">
 
-				</form>
+</form>
 
 				<div class="box-body">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Title</label> <input type="text"
-																			 name='title' class="form-control"
-																			 value="${boardVO.title}"
-																			 readonly="readonly">
+							name='title' class="form-control" value="${boardVO.title}"
+							readonly="readonly">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Content</label>
 						<textarea class="form-control" name="content" rows="3"
-								  readonly="readonly">${boardVO.content}</textarea>
+							readonly="readonly">${boardVO.content}</textarea>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Writer</label> <input type="text"
@@ -78,6 +77,9 @@
 
                     });
 				</script>
+
+
+
 
 			</div>
 			<!-- /.box -->

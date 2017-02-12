@@ -51,9 +51,9 @@ public class SearchBoardController {
     }
 
     @RequestMapping(value = "/readPage", method = RequestMethod.GET)
-    public void read(@RequestParam("bno") int bno,
-                     @ModelAttribute("cri") SearchCriteria cri,
-                     Model model) throws Exception {
+    public void read(@RequestParam("bno") int bno, @ModelAttribute("cri") SearchCriteria cri,
+                     Model model)
+            throws Exception {
 
         model.addAttribute(service.read(bno));
     }
@@ -70,14 +70,13 @@ public class SearchBoardController {
         rttr.addAttribute("searchType", cri.getSearchType());
         rttr.addAttribute("keyword", cri.getKeyword());
 
-        rttr.addFlashAttribute("msg", "success");
+        rttr.addFlashAttribute("msg", "SUCCESS");
 
         return "redirect:/sboard/list";
     }
 
     @RequestMapping(value = "/modifyPage", method = RequestMethod.GET)
-    public void modifyPagingGET(int bno,
-                                @ModelAttribute("cri") SearchCriteria cri,
+    public void modifyPagingGET(int bno, @ModelAttribute("cri") SearchCriteria cri,
                                 Model model) throws Exception {
 
         model.addAttribute(service.read(bno));
@@ -96,7 +95,7 @@ public class SearchBoardController {
         rttr.addAttribute("searchType", cri.getSearchType());
         rttr.addAttribute("keyword", cri.getKeyword());
 
-        rttr.addFlashAttribute("msg", "success");
+        rttr.addFlashAttribute("msg", "SUCCESS");
 
         logger.info(rttr.toString());
 
@@ -118,7 +117,7 @@ public class SearchBoardController {
 
         service.regist(board);
 
-        rttr.addFlashAttribute("msg", "success");
+        rttr.addFlashAttribute("msg", "SUCCESS");
 
         return "redirect:/sboard/list";
     }
