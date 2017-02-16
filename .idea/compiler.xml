@@ -8,11 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sin" />
         <module name="web" />
+        <module name="Web02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sin" target="1.7" />
-      <module name="web" target="1.7" />
+      <module name="Web02" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -124,7 +124,7 @@
 </section>
 <!-- /.content -->
 
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<%--<script src="http://code.jquery.com/jquery-latest.js"></script>--%>
 <script>
     var result = '${msg}';
 
@@ -133,7 +133,7 @@
     }
 </script>
 
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<%--<script src="http://code.jquery.com/jquery-latest.js"></script>--%>
 <script>
     $(document).ready(
         function () {
